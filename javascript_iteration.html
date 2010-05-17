@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>JavaScript Iteration</title>
+        
+        <script>
+            console.log('///////////////ITERATING OVER AN ARRAY USING AN INDEX///////////////////////');
+            var myArray = ['a', 'b', 'c', 'd'];
+
+            for (var i=0; i<myArray.length; i++) {
+                console.log(myArray[i]);
+            }
+            
+            console.log('\n');
+            console.log('\n');
+            console.log('///////////////ITERATING OVER A HASH USING FOR IN///////////////////////');
+            
+            var myHash = new Object();
+            myHash['a'] = 'a';
+            myHash['b'] = 'b';
+            myHash['c'] = 'c';
+            myHash['d'] = 'd';
+                        
+            for (var key in myHash) {
+                console.log("key: ", key, ", value: ", myHash[key]);
+            }
+            
+            console.log('\n');
+            console.log('\n');
+            console.log("///////////////ITERATING OVER AN USING FOR IN (don't do it)///////////////////////");
+            
+            myArray['contains'] = function(){};
+            for (var key in myArray) {
+                console.log('key: ', key, ', value: ', myArray[key]);
+            }
+            
+            console.log('\n');
+            console.log('\n');
+            console.log('///////////////ITERATING OVER AN ARRAY USING AN INDEX (contains not printed)///////////////////////');
+            for (var i=0; i<myArray.length; i++) {
+                console.log(myArray[i]);
+            }
+        </script>
+	</head>
+	<body>
+	</body>
+</html>
