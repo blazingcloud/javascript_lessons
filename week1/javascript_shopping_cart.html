@@ -6,14 +6,33 @@
         
         <script>
             
-            function Item() {
+            function MagicalItem() {
+                
+                this.price = 0;
+                this.name = '';
+                this.description = '';
+                this.hitPoints = 0;
+                this.manna = 0;
+                this.kilos = 0;
+                this.isPuffOfSmoke = false;
+                
+                this.damage = function(numMannaPoints) {
+                    this.manna -= numMannaPoints;
+                    
+                    if (this.manna < 0) this.isPuffOfSmoke = true; 
+                }
+                
+                this.regenerate = function(numMannaPoints) {
+                    this.manna += numMannaPoints;
+                    this.isPuffOfSmoke = false;
+                }
             }
             
             function ShoppingCart() {
                 
                 this.items = new Array();
                 
-                this.addItem = function() {
+                this.addItem = function(item) {
                     //add the item to the array
                 }
                 
@@ -21,6 +40,7 @@
                     //iterate over array and sum up the prices
                 }
             }
+            
         </script>
 	</head>
 	<body>

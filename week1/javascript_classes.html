@@ -6,14 +6,23 @@
         
         <script>
             console.log('/////////////////////////CAR CLASS////////////////////////////////');
+            
             function Car() {
                 
                 this.numDoors = 2;
                 this.color = 'red';
                 this.isDriving = false;
-                            
-                this.drive = function(){
-                    this.isDriving = true;
+                
+                var someParam = 'someParam value';
+                     
+                var self = this;
+                this.drive = function() {
+                    self.isDriving = true;
+                }
+                
+                this.getSomeParam = function() {
+                    someParam = "some value";
+                    return someParam;
                 }
                             
                 this.park = function(){
@@ -22,9 +31,12 @@
             }
             
             var camero = new Car();
+            
             camero.color = "Electric Blue";
             console.log('camero color: ', camero.color);
-            
+            console.log('camero numDoors: ', camero.numDoors);
+            console.log('camero someParam: ', camero.someParam);
+            console.log('someParam: ', camero.getSomeParam());
             console.log('camero isDriving before calling drive(): ', camero.isDriving);
             
             camero.drive();
@@ -36,6 +48,7 @@
             console.log('/////////////////////////CAR CLASS USING PROTOTYPE////////////////////////////////');
             
             function Car3() {};
+            
             Car3.prototype.numDoors = 2;
             Car3.prototype.color = 'red';
             Car3.prototype.isDriving = false;
@@ -47,13 +60,15 @@
             Car3.prototype.park =  function(){
                 this.isDriving = false;
             };
-            console.log('camero color: ', camero.color);
             
-            console.log('camero isDriving before calling drive(): ', camero.isDriving);
+            var camero3 = new Car3();
+            console.log('camero3 color: ', camero3.color);
             
-            camero.drive();
+            console.log('camero3 isDriving before calling drive(): ', camero3.isDriving);
             
-            console.log('camero isDriving after calling drive(): ', camero.isDriving);
+            camero3.drive();
+            
+            console.log('camero3 isDriving after calling drive(): ', camero3.isDriving);
             
             
             console.log('\n\n');

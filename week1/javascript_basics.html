@@ -37,7 +37,7 @@
             
             var myObj = new Object();
             console.log('undefinedVar: ', myObj['undefinedVar']);
-            console.log('is undefinedVar null? ', myObj['undefinedVar'] == null);
+            console.log('is undefinedVar null? ', myObj['undefinedVar'] === null);
             console.log('is undefinedVar undefined? ', myObj['undefinedVar'] === undefined);
             
             console.log('\n');
@@ -69,11 +69,13 @@
             console.log('\n\n');
             console.log('///////////////FUNCTIONS///////////////////////');
             
-            function sayHello(name) {
+            function sayHello(name, name2) {
                 console.log('hello ' + name);
+                return '1';
             }
             
-            sayHello('lorien');
+            var product = sayHello('lorien', 'bob');
+            console.log('product: ', product);
         </script>
     </head>
     <body>
