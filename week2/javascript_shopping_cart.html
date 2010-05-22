@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Shopping Cart</title>
+        
+        <script type="text/javascript" src="jasmine-0.10.0/lib/jasmine-0.10.0.js"></script>
+        <script type="text/javascript" src="jasmine-0.10.0/lib/TrivialReporter.js"></script>
+        <script type="text/javascript" src="jasmine-0.10.0/lib/consolex.js"></script>
+        <link rel="stylesheet" type="text/css" href="jasmine-0.10.0/lib/jasmine.css">
+        
+        <script>
+            
+            function MagicalItem() {
+                
+                this.price = 0;
+                this.name = '';
+                this.description = '';
+                this.hitPoints = 0;
+                this.mana = 0;
+                this.kilos = 0;
+                this.isPuffOfSmoke = false;
+                
+                this.damage = function(numManaPoints) {
+//                    this.mana -= numManaPoints;
+//                    
+//                    if (this.mana < 0) this.isPuffOfSmoke = true; 
+                }
+                
+                this.regenerate = function(numManaPoints) {
+//                    this.mana += numManaPoints;
+//                    this.isPuffOfSmoke = false;
+                }
+            }
+            
+            function ShoppingCart() {
+                
+                this.items = new Array();
+                
+                this.addItem = function(item) {
+                    //add the item to the array
+                }
+                
+                this.getTotalCost = function() {
+                    //iterate over array and sum up the prices
+                }
+            }
+            
+        </script>
+
+	</head>
+
+    <script type="text/javascript">
+        jasmine.include('tests/test_magical_item.js', true);
+    </script>
+	<body>
+        
+        <script type="text/javascript">
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.reporter = new jasmine.TrivialReporter();
+            jasmineEnv.execute();
+        </script>
+
+	</body>
+</html>
