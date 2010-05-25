@@ -4,10 +4,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<title>Shopping Cart</title>
         
-        <script>
+        <script> 
             
             function MagicalItem() {
-                
                 this.price = 0;
                 this.name = '';
                 this.description = '';
@@ -31,16 +30,20 @@
             function ShoppingCart() {
                 
                 this.items = new Array();
+                this.totalCost = 0;
                 
-                this.addItem = function(item) {
+                this.addItem = function(item, quantity) {
+//TODO: add ability to add more than one of an item
                     //add the item to the array
+                    this.items.push(item);
+                    this.totalCost += item.price;
                 }
                 
                 this.getTotalCost = function() {
-                    //iterate over array and sum up the prices
+                    
+                    return this.totalCost;
                 }
             }
-            
         </script>
 	</head>
 	<body>

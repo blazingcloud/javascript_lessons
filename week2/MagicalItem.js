@@ -9,12 +9,20 @@ function MagicalItem() {
     this.isPuffOfSmoke = false;
     
     this.damage = function(numManaPoints) {
-//                    this.mana -= numManaPoints;
-//                    
-//                    if (this.mana < 0) this.isPuffOfSmoke = true; 
+        this.mana -= numManaPoints;
+                    
+        if (this.mana <= 0) this.isPuffOfSmoke = true; 
     }
     
     this.regenerate = function(numManaPoints) {
+        
+        if (this.isPuffOfSmoke) {
+            this.mana = numManaPoints;
+            this.isPuffOfSmoke = false;
+        } else {
+            this.mana += numManaPoints;
+        }
+        
 //                    this.mana += numManaPoints;
 //                    this.isPuffOfSmoke = false;
     }
