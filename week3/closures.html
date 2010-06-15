@@ -11,6 +11,7 @@
                 this.message = msg;
                 
                 this.handleButtonClick = function() {
+                    console.log("MyClass handleButtonClick this:", this);
                     alert(this.message);
                 }
                 
@@ -22,6 +23,7 @@
             
             function go() {
                 
+                console.log('test');
                 var myInstance = new MyClass('You clicked the button!');
                 
                 var myBtn = document.getElementById('myButton');
@@ -30,6 +32,7 @@
                 
                 var myBtnToo = document.getElementById('myButtonToo');
                 myBtnToo.onclick = function () {
+                    console.log("anonymous function this:", this);
                     myInstance.handleButtonClick();
                 }
                 
