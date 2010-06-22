@@ -58,6 +58,11 @@
         </style>
 
         <script>
+            
+            var characters = ['wizard', 'dwarf', 'hobbit'];
+            
+            
+            
             var magicalItems = [];
     
             var item1 = new MagicalItem();
@@ -86,6 +91,11 @@
             item3.mana = 10;
             item3.kilos = .1;
             magicalItems.push(item3);
+            
+            var characterItems = {};
+            characterItems['wizard'] = [item1, item2];
+            characterItems['dwarf'] = [item1];
+            characterItems['hobbit'] = [item3];
             
             function buildCatalog() {
                 

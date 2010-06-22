@@ -10,12 +10,20 @@
                 this.isDriving = false;
                 
                 this.drive = function() {
+                    alert("isDriving is " + this + " " + this.isDriving);
                     this.isDriving = true;
-                    alert("isDriving is " + this.isDriving);
                 }
             }
             
             function go() {
+                
+                var driveBtn = document.getElementById('driveBtn');
+                var car = new Car();
+                
+                driveBtn.onclick = function() {
+                    
+                    car.drive();
+                }
                 
                 //create a car and attach it's drive method as the onclick event handler
                 //without modifying the implementation of the Car class

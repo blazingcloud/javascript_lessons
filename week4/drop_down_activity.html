@@ -9,8 +9,13 @@
             function go() {
                 
                 document.getElementById('colorSelect').onchange = function() {
+                    
                     var chosenOption = this.options[this.selectedIndex];
-                    alert(chosenOption.value);
+                    
+                    //alert(chosenOption.value);
+                    
+                    var colorDiv = document.getElementById('colorDiv');
+                    colorDiv.style.backgroundColor = chosenOption.value;
                     
                     //change the background color of colorDiv to be
                     //the color that was selected
@@ -22,6 +27,7 @@
     <body onload="go()">
         
         <select id="colorSelect">
+            <option value="0">Select from list...</option>
             <option value="red">Red</option>
             <option value="blue">Blue</option>
             <option value="green">Green</option>
