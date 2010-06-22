@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Car Closure Activity 3</title>
+        
+        <script>
+            function Car(driveMessage) {
+                
+                this.drive = function() {
+                    
+                    //alert the drive message
+                }
+            }
+            
+            function go() {
+                
+                var camero = new Car("Wheeeeeeee!");
+                document.getElementById('driveBtn').onclick = camero.drive;
+            }
+        </script>
+        
+    </head>
+    <body onload="go()">
+        
+        <button id="driveBtn">Drive!</button>
+    </body>
+</html>

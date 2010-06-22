@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Passing Function Pointers</title>
+        <script>
+            
+            function ButtonHandlerAttacher() {
+                
+                this.whoAmI = "Button Handler Attacher";
+                
+                this.attachHandler = function(context, functionPointer, btn) {
+                    btn.onclick = function() {
+                        functionPointer.call(context);
+                    }
+                }
+            }
+            
+            function ButtonHandler() {
+                
+                this.whoAmI = "Button Handler";
+                
+                this.handleButtonClick = function() {
+                    alert("You clicked me! Handled by " + this.whoAmI);
+                }
+            }
+            
+            function go() {
+                
+                
+                var buttonHandler = new ButtonHandler();
+                var buttonHandlerAttacher = new ButtonHandlerAttacher();
+                
+                var myBtn = document.getElementById('myBtn');
+                buttonHandlerAttacher.attachHandler(buttonHandler, buttonHandler.handleButtonClick, myBtn);
+                
+                var myBtnToo = document.getElementById('myBtnToo');
+                buttonHandlerAttacher.attachHandler(null, buttonHandler.handleButtonClick, myBtnToo);
+                
+                var myBtnThree = document.getElementById('myBtnThree');
+                buttonHandlerAttacher.attachHandler(buttonHandlerAttacher, buttonHandler.handleButtonClick, myBtnThree);
+            }
+            
+        </script>
+	</head>
+	<body onload="go();">
+	    <button id="myBtn">Click Me!</button>
+        <button id="myBtnToo">Click Me Too!</button>
+        <button id="myBtnThree">Click Me Three!</button>
+	</body>
+</html>

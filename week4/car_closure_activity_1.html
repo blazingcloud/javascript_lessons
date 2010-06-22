@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Car Closure Activity 1</title>
+        
+        <script>
+            function Car() {
+                
+                this.isDriving = false;
+                
+                this.drive = function() {
+                    this.isDriving = true;
+                    alert("isDriving is " + this.isDriving);
+                }
+            }
+            
+            function go() {
+                
+                //create a car and attach it's drive method as the onclick event handler
+                //without modifying the implementation of the Car class
+            }
+        </script>
+        
+	</head>
+	<body onload="go()">
+	    
+        <button id="driveBtn">Drive!</button>
+	</body>
+</html>

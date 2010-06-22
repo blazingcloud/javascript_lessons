@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Car Closure Activity 2</title>
+        
+        <script>
+            function Car() {
+                
+                this.isDriving = false;
+                
+                this.drive = function() {
+                    //set isDriving to true
+                    //alert the value of isDriving
+                    
+                    //fill in only this method implementation, don't change
+                    //the way the event handler is attached
+                }
+            }
+            
+            function go() {
+                
+                var camero = new Car();
+                document.getElementById('driveBtn').onclick = camero.drive;
+            }
+        </script>
+        
+    </head>
+    <body onload="go()">
+        
+        <button id="driveBtn">Drive!</button>
+    </body>
+</html>
