@@ -7,8 +7,10 @@
         <LINK href="style.css" rel="stylesheet" type="text/css">
         
         <script>
-            //set by the javascript in catalog_json.js
+            //magical_store is our namespace
             var magical_store = {};
+            
+            //set by the javascript in catalog_json.js
             magical_store.characters = null;
             magical_store.characterItems = null;
             magical_store.magicalItems = null;
@@ -27,13 +29,9 @@
             //turn our data objects into MagicalItems
             for (var i=0, l=magical_store.magicalItems.length; i<l; i++) {
                 
-                var item = magical_store.magicalItems[i];
-                magical_store.magicalItems[i].__proto__ = new magical_store.MagicalItem;
-                magical_store.magicalItems[i].constructor = magical_store.MagicalItem;
+                var item = new magical_store.MagicalItem(magical_store.magicalItems[i]);
                 
                 itemNameHash[item.name] = item;
-                
-                console.log(magical_store.magicalItems[i].__proto__, magical_store.magicalItems[i].regenerate);
             }
             
             function buildCharacterSelect() {
@@ -89,5 +87,6 @@
         <div id="cart">
             <div id="cart_total">Total Price: $<span id="cart_dollars"></span></div>
         </div>
+        
     </body>
 </html>
