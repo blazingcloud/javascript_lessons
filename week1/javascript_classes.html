@@ -47,7 +47,10 @@
             console.log('\n\n');
             console.log('/////////////////////////CAR CLASS USING PROTOTYPE////////////////////////////////');
             
-            function Car3() {};
+            function Car3() {
+                
+                console.log("Car3 constructor", this.prototype);
+            };
             
             Car3.prototype.numDoors = 2;
             Car3.prototype.color = 'red';
@@ -62,6 +65,7 @@
             };
             
             var camero3 = new Car3();
+            camero3.color = "yellow";
             console.log('camero3 color: ', camero3.color);
             
             console.log('camero3 isDriving before calling drive(): ', camero3.isDriving);
@@ -86,13 +90,34 @@
             console.log('/////////////////////////INSTANCE OF////////////////////////////////');
             
             console.log('camero instance of Car? ', camero instanceof Car);
-            
+            console.log('is null instanceof object?', null instanceof Object);
+            var myString = new String("something");
+            console.log('is myString instanceof object?', myString instanceof Object);
             
             console.log('\n\n');
             console.log('/////////////////////////TYPEOF////////////////////////////////');
             
             console.log('typeof camero: ', typeof camero);
             console.log('typeof camero.drive: ', typeof camero.drive);
+            console.log('typeof window', typeof window);
+            
+            console.log('typeof string object', typeof myString);
+            console.log('typeof string literal', typeof "my string");
+            console.log('typeof number', typeof 1);
+            console.log('typeof true', typeof true);
+            
+            //console.log('camero constructor', camero.__proto__.constructor.toString());
+            
+            
+            var myCarHash2 = {numDoor:2, color:'pink', isDriving:false};
+            console.log('myCarHash2', myCarHash2);
+            
+            var myCarHash = {numDoor:2, color:'pink', isDriving:false};
+            myCarHash.__proto__ = new Car;
+            console.log('myCarHash after setting prototype', myCarHash);
+            
+            
+            
         </script>
 	</head>
 	<body>

@@ -17,10 +17,10 @@
             console.log('///////////////ITERATING OVER A HASH USING FOR IN///////////////////////');
             
             var myHash = new Object();
-            myHash['a'] = 'a';
-            myHash['b'] = 'b';
             myHash['c'] = 'c';
             myHash['d'] = 'd';
+            myHash['a'] = 'a';
+            myHash['b'] = 'b';
                         
             for (var key in myHash) {
                 console.log("key: ", key, ", value: ", myHash[key]);
@@ -39,6 +39,13 @@
             console.log('\n');
             console.log('///////////////ITERATING OVER AN ARRAY USING AN INDEX (contains not printed)///////////////////////');
             for (var i=0; i<myArray.length; i++) {
+                console.log(myArray[i]);
+            }
+            
+            console.log('\n');
+            console.log('\n');
+            console.log('///////////////ITERATING OVER AN ARRAY USING AN INDEX (contains not printed)///////////////////////');
+            for (var i=0, l=myArray.length; i<l; i++) {
                 console.log(myArray[i]);
             }
         </script>

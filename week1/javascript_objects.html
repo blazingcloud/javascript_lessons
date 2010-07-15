@@ -17,23 +17,28 @@
             
             console.log("myObject.a: ", myObject.a);
             console.log("myObject['a']: ", myObject['a']);
+            console.log("myObject.b: ", myObject.b);
+            console.log("myObject['b']: ", myObject['b']);
             
             console.log('\n');
             console.log('\n');
             console.log('///////////////FUNCTIONS///////////////////////');
             
-            myObject.myFunction = function() {
+            myObject['myFunction'] = function() {
                 console.log('function prints myObject.a: ', myObject.a);
+                return 1;
             };
             
             myObject.myFunction();
+            
+            console.log(myObject['myFunction']);
             
             console.log('\n');
             console.log('\n');
             console.log('///////////////PRINTING MEMBERS///////////////////////');
             
             for (var key in myObject) {
-                console.log(key, ": ", myObject[key], myObject);
+                console.log(key, ": ", myObject[key]);
             }
         </script>
 	</head>
