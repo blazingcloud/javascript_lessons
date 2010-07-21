@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Language Basics</title>
+        
+        <script>
+            console.log('///////////////NUMBERS AND STRINGS///////////////////////');
+            var myNumber1 = 1;
+            var myNumber2 = 2;
+            var mySum = myNumber1 + myNumber2;
+            console.log('mySum: ', mySum);
+            console.log('\n');
+            
+            var myString1 = "string 1";
+            var myString2 = "string 2";
+            var myConcat = myString1 + myString2;
+            console.log('myConcat: ', myConcat);
+            console.log('\n');
+            
+            var myCombo1 = myString1 + myNumber1;
+            console.log('myCombo1: ', myCombo1);
+            console.log('\n');
+            
+            var myCombo2 = myNumber1 + myString1;
+            console.log('myCombo2: ', myCombo2);
+            console.log('\n');
+            console.log('\n');
+            
+            console.log('///////////////NULL AND UNDEFINED///////////////////////');
+            var nullVar = null;
+            console.log('nullVal: ', nullVar);            
+            console.log('is nullVar null? ', nullVar == null);
+            console.log('is nullVar undefined? ', nullVar === undefined);
+            
+            console.log('\n');
+            
+            console.log('hello world');
+            
+            var myObj = new Object();
+            console.log('undefinedVar: ', myObj['undefinedVar']);
+            console.log('is undefinedVar null? ', myObj['undefinedVar'] == null);
+            console.log('is undefinedVar undefined? ', myObj['undefinedVar'] === undefined);
+            
+            console.log('\n');
+            
+            console.log('///////////////TRUTH///////////////////////');
+            if (myObj['undefinedVar']) {
+                console.log('undefinedVar is true');
+            } else {
+                console.log('undefinedVar is false');
+            }
+            console.log('\n');
+  
+            
+            console.log('///////////////ARRAYS///////////////////////');
+            var myArray = [1,2];
+            console.log('myArray: ', myArray);
+            
+            var myArray2 = new Array();
+            myArray2.push(1);
+            myArray2.push(2);
+            console.log('myArray2: ', myArray2);
+  
+
+            console.log('\n\n');
+            console.log('///////////////toString///////////////////////');
+            console.log('myArray2 toString: ', myArray2.toString());
+  
+
+            console.log('\n\n');
+            console.log('///////////////FUNCTIONS///////////////////////');
+            
+            function sayHello(name, name2, name3, name4) {
+                console.log('hello ' + name, name2, name3, name4);
+                
+                //global variable
+                myVariable = "something";
+                return '1';
+            }
+            
+            var product = sayHello('lorien', 'bob', 'ken', 'barbie', 'bill');
+            console.log('product: ', product);
+            
+            console.log("myVariable", myVariable);
+        </script>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        
+    </body>
+</html>
