@@ -24,3 +24,7 @@ MagicalItem.prototype.regenerate = function(numManaPoints) {
         this.mana += numManaPoints;
     }
 }
+
+var myItem = new MagicalItem();
+myItem.price = 10;
+myItem.name = 'Magic Hat';
