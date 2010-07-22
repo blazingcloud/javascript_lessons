@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>MagicalItem Test Runner</title>
+        
+        <script type="text/javascript" src="jasmine-0.10.0/lib/jasmine-0.10.0.js"></script>
+        <script type="text/javascript" src="jasmine-0.10.0/lib/TrivialReporter.js"></script>
+        <script type="text/javascript" src="jasmine-0.10.0/lib/consolex.js"></script>
+        <link rel="stylesheet" type="text/css" href="jasmine-0.10.0/lib/jasmine.css">
+        
+        <script type="text/javascript" src="MagicalItem.js"></script>
+	</head>
+
+    <script type="text/javascript">
+        jasmine.include('tests/test_magical_item.js', true);
+    </script>
+    
+	<body>
+	    
+        <script type="text/javascript">
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.reporter = new jasmine.TrivialReporter();
+            jasmineEnv.execute();
+        </script>
+        
+	</body>
+</html>
