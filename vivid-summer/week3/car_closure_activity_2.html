@@ -13,11 +13,14 @@
                 var me = this;
                 this.drive = function() {
                     
+                    me.isDriving = true;
+                    console.log(me.message, me.isDriving);
+                    
                     //set isDriving to true
                     //fill in only this method implementation, don't change
                     //the way the event handler is attached
                     
-                    console.log(this.message, this.isDriving);
+                    //console.log(this.message, this.isDriving);
                 }
             }
             
@@ -25,8 +28,9 @@
                 
                 //do not modify this method
                 
+                var driveBtn = document.getElementById('driveBtn');
                 var camero = new Car();
-                document.getElementById('driveBtn').onclick = camero.drive;
+                driveBtn.onclick = camero.drive;
             }
         </script>
         

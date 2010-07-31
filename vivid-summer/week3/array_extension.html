@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Untitled Document</title>
+        
+        <script>
+            
+            Array.prototype.contains = function(item) {
+                for (var i=0; i<this.length; i++) { 
+                    if (this[i] === item) return i;
+                }
+                return -1;
+            }
+            
+            Array.prototype.remove = function(item) {
+                var i = this.contains(item);
+                
+                if (i === -1) return false;
+                
+                this.splice(i, 1);
+                
+                return true;
+            }
+            
+            
+            var myArray = ['a', 'b', 'c'];
+            
+            console.log("array contains a: ", myArray.contains('a'));
+            
+            myArray.remove('a');
+            
+            console.log(myArray);
+            
+        </script>
+	</head>
+	<body>
+	</body>
+</html>

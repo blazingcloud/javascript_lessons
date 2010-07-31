@@ -7,20 +7,28 @@
         <script>
             function Car(driveMessage) {
 
-                this.isDriving = false;
+                console.log("in constructor: ", driveMessage);
                 
+                this.isDriving = false;
+                console.log(driveMessage2);
                 this.drive = function() {
                     
+                    alert(driveMessage2);
                     //set isDriving to true
                     //alert the drive message and the value of isDriving
                     //use "alert();"
                 }
+                
+                this.drive();
+                
+                var driveMessage2 = "some other message";
             }
             
             function go() {
                 
                 //do not modify this method
                 var camero = new Car("Wheeeeeeee!");
+                
                 document.getElementById('driveBtn').onclick = camero.drive;
             }
         </script>

@@ -31,6 +31,7 @@
                 height:90px;
                 border-bottom:1px #999999 solid;
                 padding-top:2px;
+                display:none;
             }
             
             .catalogItemName {
@@ -45,6 +46,7 @@
             .catalogItemPrice {
                 font-size:10pt;
                 margin-top:3px;
+                font-weight:bold;
             }
         </style>
 
@@ -82,8 +84,13 @@
                 
                 var catalogDiv = document.getElementById('catalog');
                 
+                var tempDiv = document.getElementById('itemTemplate');
+                
                 for (var i=0, l=magicalItems.length; i<l; i++) {
                     var item = magicalItems[i];
+                    
+                    var itemView = new MagicalItemView(item);
+                    itemView.draw(catalogDiv);
                 
                     var itemDiv = document.createElement('div');
                     itemDiv.className = 'catalogItem';
@@ -99,10 +106,34 @@
                     descriptionDiv.innerHTML = item.description;
                     itemDiv.appendChild(descriptionDiv);
                     
-                    //add a div to hold price
-                    //should display like: "Price: $12" in bold font
-                    //use CSS class named 'catalogItemPrice'
+                    var priceDiv = document.createElement('div');
+                    priceDiv.className = 'catalogItemPrice';
+                    priceDiv.innerHTML = "<font color='red'>Price: $" + item.price + "</font>";
+                    priceDiv.style.fontWeight = "bold";
+                    itemDiv.appendChild(priceDiv);
+
+//                    var itemDiv = tempDiv.cloneNode(true);
+//                    var nameDiv = itemDiv.childNodes[1];
+//                    nameDiv.innerHTML = item.name;
+//                    
+//                    catalogDiv.appendChild(itemDiv);
+//                    itemDiv.style.display = 'block';
+//                    itemDiv.id = 'itemDiv' + i;
+//                    
+//                    console.log(itemDiv.id);
                 }
+                
+                var myButton = document.createElement('button');
+                myButton.innerHTML = "Click Me!";
+                document.body.appendChild(myButton);
+                
+                myButton.onclick = clickHandler;
+                console.log('myButton: ', myButton, 'onlclick: ', myButton.onClick);
+            }
+            
+            var someVar = "some var value";
+            function clickHandler() {
+                alert('Hello!!! ' + someVar);
             }
         </script>
         
@@ -111,6 +142,10 @@
 	    <h1>Magical Store</h1>
         <hr />
         <h2>Catalog</h2>
-	    <div id="catalog"></div>
+	    <div id="catalog">
+	        <div id="itemTemplate" class="catalogItem">
+	            <div class="itemName"></div>
+	        </div>
+	    </div>
 	</body>
 </html>
