@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>JQuery Activities</title>
+        
+        <script src="http://code.jquery.com/jquery-1.4.2.js"></script>
+        
+        <style>
+            .over {
+                font-weight:bold;
+            }
+            
+            #bindDiv {
+                background-color:#EEEEEE;
+                font-color:#000000;
+                font-size:14pt;
+                width:500px;
+                height:100px;
+                padding:10px;
+            }
+            
+            #hoverDiv {
+                margin-top:30px;
+                background-color:#EEBBEE;
+                font-color:#000000;
+                font-size:14pt;
+                width:500px;
+                height:100px;
+                padding:10px;
+            }
+            
+            #animateDiv {
+                margin-top:30px;
+                background-color:#BBEEEE;
+                font-color:#000000;
+                font-size:14pt;
+                width:100px;
+                height:100px;
+                padding:10px;
+            }
+            
+            #fadeDiv {
+                margin-top:30px;
+                background-color:#EEEEBB;
+                font-color:#000000;
+                font-size:14pt;
+                width:500px;
+                height:100px;
+                padding:10px;
+            }
+        </style>
+        
+        <script>
+            
+            $(document).ready(function(){
+                
+                /**************** bindDiv ***********************/
+                //bind an event handler to mouseenter and mouseleave to toggle the 'over'
+                //class on and off. Use a CSS selector to get a wrapped jQuery object.
+                
+
+                /**************** hoverDiv **********************/
+                //Use the hover() (under Events in API docs)
+                //method to attach event handlers for mouseenter and mouseout
+                //On mouse enter change the contents of the div to say "Hello World!"
+                //On mouse out change the contents to say "Good Bye World!"
+                //Use a CSS selector to get a wrapped jQuery object.
+                
+                
+                /**************** animateDiv **********************/
+                //Use the animate function (under Effects in API docs)
+                //to animate the animateDiv open to width of 500px
+                //and then back to 50px continuously. It should take
+                //1500ms to open and 1500ms to close
+                animateOpen();
+                
+                /**************** fadeDiv ************************/
+                //Use the fadeOut and fadeIn functions (under Effects in API docs)
+                //to fade the fadeDiv in and out
+                //It should take 1500ms to fade in and 1500ms to fade out
+                fadeOut();
+            });
+            
+            function animateOpen() {
+                
+            }
+            function animateClosed() {
+                
+            }
+            
+            function fadeOut() {
+                
+            }
+            
+            function fadeIn() {
+                
+            }
+
+        </script>
+    </head>
+    <body>
+        
+        <div id="bindDiv">Hello World!</div>
+        
+        <div id="hoverDiv"></div>
+        
+        <div id="animateDiv"></div>
+        
+        <div id="fadeDiv">Fade me.</div>
+    </body>
+</html>
