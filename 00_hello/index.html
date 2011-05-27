@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title>Test-First Teaching: blazingcloud_javascript_lessons: hello</title>
+  <link href="../assets/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class='header'>
+    <h1><a href="http://testfirst.org">TestFirst.org</a></h1>
+    <h2>the home of test-first teaching</h2>
+  </div>
+  <div class="nav"><h2><a href="../index.html">blazingcloud_javascript_lessons</a></h2><b>Chapters:</b><ul><li>00 Hello</li><li><a href="../01_string_basics/index.html">01 String Basics</a></li><li><a href="../02_properties/index.html">02 Properties</a></li><li><a href="../03_loops/index.html">03 Loops</a></li><li><a href="../04_color_strings/index.html">04 Color Strings</a></li><li><a href="../05_calculator/index.html">05 Calculator</a></li><li><a href="../06_temperature/index.html">06 Temperature</a></li><li><a href="../07_dom/index.html">07 Dom</a></li><li><a href="../08_bouncing_ball/index.html">08 Bouncing Ball</a></li></ul></div>
+  <div class="info"><h1>hello</h1><ul><li><a href="HelloSpec.js">HelloSpec.js</a></li></ul></div>
+  <div class='content'>
+<h1>Say Hello to JavaScript</h1>
+
+<h2>Open a console</h2>
+
+<p>Once the console is open, change directories into the 00_hello directory</p>
+
+<pre><code>cd 00_hello
+</code></pre>
+
+<h2>Run the Jasmine server</h2>
+
+<pre><code>rake jasmine
+</code></pre>
+
+<h2>Open the spec page in your web browser</h2>
+
+<pre><code>open http://localhost:8888/  # Mac only
+</code></pre>
+
+<p>You should see a failing spec. This is good! Now it's your turn to make it pass.</p>
+
+<h2>Open the spec file in a text editor</h2>
+
+<pre><code>open HelloSpec.js  # Mac only
+</code></pre>
+
+<p>This file is written in a particular syntax for a testing tool named Jasmine BDD. Here are a few important rules:</p>
+
+<ol>
+<li>each "<code>describe</code>" starts a related group of specs</li>
+<li>each "<code>it</code>" starts a single spec</li>
+<li>each "<code>expect</code>" describes a single <strong>assertion</strong> about your source code</li>
+</ol>
+
+
+<p>For example, <code>expect(hello()).toEqual("Hello!")</code> means "when I call the function <code>hello()</code>, I expect its result to be equal to the string <code>"Hello!"</code>"</p>
+
+<h2>Create the source file</h2>
+
+<p>Create and open a file named <code>hello.js</code>. Inside it, put the following text:</p>
+
+<pre><code>function hello() {
+}
+</code></pre>
+
+<h2>Reload the spec page in the browser</h2>
+
+<p>You should still see the same failing spec, but it should be failing for a different reason.</p>
+
+<h2>Make the first spec pass</h2>
+
+<p>Make <code>hello.js</code> look like this:</p>
+
+<pre><code>function hello() {
+    return "Hello!"
+}
+</code></pre>
+
+<p>Reload the spec page in the browser. The first spec should pass!</p>
+
+<h2>Now do a little victory dance!</h2>
+
+<p>Also, high five your partner. If you don't have a partner, high five your dog.</p>
+
+<h2>Next steps</h2>
+
+<p>Make the next spec pass. This will require an <code>if</code> statement and some messing around with the function declaration.</p>
+
+<p>Here's a hint: In JavaScript, if the caller forgets to pass in an argument to a function, then its value is <em>undefined</em> (which is almost the same thing as <em>false</em>).</p>
+  </div>
+  <div class='footer'>
+    <a href="http://testfirst.org">TestFirst.org</a>
+  </div>
+</body>
+</html>
