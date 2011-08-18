@@ -7,6 +7,13 @@ body {
   font-size: 15px;
   line-height: 19px; }
 
+
+.c_green {
+	padding: 1px;
+	background-color: #626262;
+	color: #7eff09;
+	border-radius: 4px;
+}
 a, a:visited {
   color: #268bd2; }
 
