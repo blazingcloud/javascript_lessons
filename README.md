@@ -14,6 +14,6 @@ Stay healthy and may you be happy, healthy and free from calamity.
 
 
 @authors
- Alex Chaffee http://alexch.github.com/
- Sarah Allen  http://www.ultrasaurus.com/
- Curtis Schofield http://ram9.cc
+ * Alex Chaffee http://alexch.github.com/
+ * Sarah Allen  http://www.ultrasaurus.com/
+ * Curtis Schofield http://ram9.cc
