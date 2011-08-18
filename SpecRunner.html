@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Test Runner</title>
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.2/jasmine.css">
+  <script type="text/javascript" src="lib/jasmine-1.0.2/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine-1.0.2/jasmine-html.js"></script>
+
+  <!-- include source files here... -->
+
+  <script type="text/javascript" src="00_hello/hello.js"></script>
+  <script type="text/javascript" src="00_hello/helloSpec.js"></script>
+
+  <script type="text/javascript" src="01_string_basics/string.js"></script>
+  <script type="text/javascript" src="01_string_basics/stringSpec.js"></script>
+
+  <script type="text/javascript" src="02_properties/properties.js"></script>
+  <script type="text/javascript" src="02_properties/propertiesSpec.js"></script>
+
+  <script type="text/javascript" src="03_loops/loops.js"></script>
+  <script type="text/javascript" src="03_loops/loopsSpec.js"></script>
+
+  <script type="text/javascript" src="04_color_strings/strings.js"></script>
+  <script type="text/javascript" src="04_color_strings/stringsSpec.js"></script>
+
+  <script type="text/javascript" src="05_color_strings/strings.js"></script>
+  <script type="text/javascript" src="05_color_strings/stringsSpec.js"></script>
+
+  <script type="text/javascript" src="06_temperature/temperature.js"></script>
+  <script type="text/javascript" src="06_temperature/matchers.js"></script>
+  <script type="text/javascript" src="06_temperature/temperatureSpec.js"></script>
+
+  <script type="text/javascript" src="07_dom/color.js"></script>
+  <script type="text/javascript" src="07_dom/dom.js"></script>
+  <script type="text/javascript" src="07_dom/number.js"></script>
+  <script type="text/javascript" src="07_dom/domTemperatureWidget.js"></script>
+  <script type="text/javascript" src="07_dom/colorSpec.js"></script>
+  <script type="text/javascript" src="07_dom/domSpec.js"></script>
+  <script type="text/javascript" src="07_dom/numberSpec.js"></script>
+  <script type="text/javascript" src="07_dom/domTemperatureWidgetSpec.js"></script>
+
+  <script type="text/javascript" src="08/bouncingBall.js"></script>
+  <script type="text/javascript" src="08/bouncingBallSpec.js"></script>
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+  jasmine.getEnv().execute();
+</script>
+
+</body>
+</html>

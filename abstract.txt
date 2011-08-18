@@ -1,12 +1,23 @@
-The target audience for this class are individuals with programming experience in another language and that understand web development. A book will be provided to compliment the class instruction.
+The target audience for this class are individuals with programming experience in another language and that understand web development.
 
-The class will cover: 
 - Javascript language 
 - TDD using Jasmine 
 - Working with the browser DOM 
-- AJAX 
-- jQuery basics
 
-Alex Chaffee is an expert in object oriented programming and design, user interface design, website administration, and systems programming in Unix, MacOS, and Windows. Alex's many projects and roles can be viewed on his site, http://alexch.github.com/ .
+
+@authors
+Sarah Allen is the founder of Blazing Cloud and an advisor and expert in
+many computing disciplines as well as a co-founder of Mightyverse and
+Railsbridge.
+
+Alex Chaffee is an expert in object oriented programming and design, 
+user interface design, website administration, and systems programming in 
+Unix, MacOS, and Windows. Alex's many projects and roles can be viewed on
+his site, http://alexch.github.com/ .
+
+Curtis Schofield is a hacker in the original sense of the word. His
+experice includes a variety of hardware and software platforms - as well
+as being a Teacher and an expert in web services he is a consumate sewer
+and makes his own pants. 
 
 http://classes.blazingcloud.net/courses/show/18/javascript-for-programmers
