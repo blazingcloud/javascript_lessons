@@ -1,16 +1,16 @@
 describe("Loops", function() {
-	describe("repeat", function() {
-		it("is empty with 0 repeats", function() {
-			expect(repeat("yo", 0)).toEqual("");
+	describe("loop", function() {
+		it("is empty with 0 loops", function() {
+			expect(loop("yo", 0)).toEqual("");
 		});
-		it("repeats its argument once", function() {
-			expect(repeat("yo", 1)).toEqual("yo");
+		it("loops its argument once", function() {
+			expect(loop("yo", 1)).toEqual("yo");
 		});
-		it("repeats its argument twice", function() {
-			expect(repeat("yo", 2)).toEqual("yoyo");
+		it("loops its argument twice", function() {
+			expect(loop("yo", 2)).toEqual("yoyo");
 		});
-		it("repeats its argument many times", function() {
-			expect(repeat("yo", 10)).toEqual("yoyoyoyoyoyoyoyoyoyo");
+		it("loops its argument many times", function() {
+			expect(loop("yo", 10)).toEqual("yoyoyoyoyoyoyoyoyoyo");
 		});
 	});
 	
