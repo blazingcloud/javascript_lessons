@@ -65,6 +65,14 @@ describe("Loops", function() {
 	    it("computes the sum of an array of many numbers", function() {
 	      expect(sum([1,3,5,7,9])).toEqual(25);
 	    });
+
+      it("doesn't mutate the original array", function() { 
+        var original_array = [1,3,5]
+        var array = [1,3,5]
+        var expected_sum = 9;
+        expect(sum(array)).toEqual(expected_sum)
+        expect(array).toEqual(original_array)
+      });
 		});
 	});
 	

@@ -1,4 +1,39 @@
 describe("rgb", function() {
+
+  describe("hex_to_num conversion helper", function() {
+    it("converts A to 10", function() {
+        expect(hex_to_num("A")).toEqual(10)
+    })
+    it("converts B to 11", function() {
+        expect(hex_to_num("B")).toEqual(11)
+    })
+    it("converts C to 12", function() {
+        expect(hex_to_num("C")).toEqual(12)
+    })
+    it("converts D to 13", function() {
+        expect(hex_to_num("D")).toEqual(13)
+    })
+    it("converts E to 14", function() {
+        expect(hex_to_num("E")).toEqual(14)
+    })
+    it("converts F to 15", function() {
+        expect(hex_to_num("F")).toEqual(15)
+    })
+
+    it("converts f to 15", function() {
+        expect(hex_to_num("f")).toEqual(15)
+    })
+
+    var generator = function(amount) {
+            return function() {
+                expect(hex_to_num(""+amount)).toEqual(amount)
+            }
+    }
+    for(var i = 0, length = 10; i < length; i++) {
+      it("converts '"+i+"' to " + i,generator(i))
+    }
+    
+  })
 	it("converts the black hex code", function() {
 		expect(rgb("#000000")).toEqual([0, 0, 0]);		
 	});
