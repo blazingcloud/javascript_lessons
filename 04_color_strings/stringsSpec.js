@@ -57,7 +57,7 @@ describe("hex", function() {
 	it("converts the black rgb code", function() {
 		expect(hex([0,0,0])).toEqual("#000000");
 	});
-	it("converts the white hex code", function() {
+	it("converts the white rgb code", function() {
 		expect(hex([255,255,255])).toEqual("#FFFFFF");
 	});
 	it("converts a trivial rgb code", function() {
