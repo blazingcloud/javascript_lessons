@@ -54,10 +54,20 @@ describe("Temperature", function() {
 			temperature.setFahrenheit(32);
 			expect(temperature.fahrenheit()).toEqual(32);
 		});
+
+		it("stores degrees Fahrenheit", function() {
+			temperature.setFahrenheit(212);
+			expect(temperature.fahrenheit()).toEqual(212);
+		});
 		
 		it("converts from Fahrenheit to Celcius", function() {
 			temperature.setFahrenheit(32);
 			expect(temperature.celcius()).toEqual(0);
+		});
+
+		it("converts from Fahrenheit to Celcius", function() {
+			temperature.setFahrenheit(212);
+			expect(temperature.celcius()).toEqual(100);
 		});
 		
 		it("stores degrees Celcius", function() {
@@ -78,6 +88,11 @@ describe("Temperature", function() {
 		it("can be constructed with degrees Fahrenheit", function() {
 			temperature = new Temperature(32);
 			expect(temperature.celcius()).toEqual(0);
+		});
+
+		it("can be constructed with degrees Fahrenheit", function() {
+			temperature = new Temperature(212);
+			expect(temperature.celcius()).toEqual(100);
 		});
 		
 		// Bonus refactoring: once the above specs pass, 
