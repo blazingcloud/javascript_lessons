@@ -64,6 +64,11 @@ describe("Temperature", function() {
 			temperature.setCelcius(0);
 			expect(temperature.celcius()).toEqual(0);
 		});
+
+		it("stores degrees Celcius", function() {
+			temperature.setCelcius(100);
+			expect(temperature.celcius()).toEqual(100);
+		});
 		
 		it("converts from Celcius to Fahrenheit", function() {
 			temperature.setCelcius(0);
